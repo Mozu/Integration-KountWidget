@@ -1,0 +1,25 @@
+{
+  "about": {
+    "name": "Integrations Theme",
+    "extends": "core5",
+    "isDesktop": true,
+    "isMobile": false,
+    "version": "0.1.0"
+  },
+  "pageTypes": [],
+  "widgets": [
+    { 
+        "id":"kount_logo",
+        "displayName":"Kount Fraud Detection",
+        "displayTemplate":"kount/kount-logo",
+        "editViewFields":[{
+            "name":"merchantId",
+            "fieldLabel":"Merchant ID"
+        }, {
+            "name":"tenantUrl",
+            "fieldLabel":"Kount Tenant URL"
+        }],
+        "icon":"/resources/admin/widgets/28_fraud_detection.png",
+        "validPageTypes":["checkout"]
+    }]
+}
