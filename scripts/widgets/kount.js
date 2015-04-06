@@ -2,7 +2,7 @@ require(['modules/jquery-mozu', 'hyprlive',"modules/backbone-mozu",  "modules/ap
     function ($, Hypr, Backbone, Api) {
   
     $(document).ready(function () {
-       var res=Api.get('entity',{listName: 'mozu-kount-settings@a0842dd', id: Api.context.site });
+       var res=Api.get('entity',{listName: 'mozu-kount-settings@a0842dd', id: 'KountId' });
        res.then(function(r) { 
              var data = r.data;
              var merchantId=data.merchantId;
@@ -12,12 +12,14 @@ require(['modules/jquery-mozu', 'hyprlive',"modules/backbone-mozu",  "modules/ap
              var $validationImg = $('#validationImg');
              
              var pageId = $validationFrame.data('model-id');
-             var tenantId = $validationFrame.data('tenant');
+             var tenantId = Api.context.tenant;
+             var siteId = Api.context.site;
              
-             var url = tenantUrl + "/logo.html?" + $.param({
+             var url = tenantUrl + "/logo.htm?" + $.param({
             	 s: pageId,
             	 m: merchantId,
-            	 t: tenantId
+            	 t: tenantId,
+            	 si: siteId
              });
              
              $validationImg.attr("src", url);
@@ -25,5 +27,3 @@ require(['modules/jquery-mozu', 'hyprlive',"modules/backbone-mozu",  "modules/ap
        });
     });
 });
-
-
