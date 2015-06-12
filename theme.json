@@ -1,19 +1,43 @@
 {
+  /* About: Basic Information about the theme. */
   "about": {
     "name": "Kount 1.0 Integrations Theme",
-    "extends": "core5",
+    "extends": "core4",
     "isDesktop": true,
-    "isMobile": false,
-    "version": "0.1.0"
+    "isMobile": true
   },
-  "pageTypes": [],
+  /* Settings: User-configurable options for your theme. */
+    "settings": {
+
+      
+    },
+ /* Page Types: Users will be allowed to create documents of this type in the CMS */
+    "pageTypes": [
+
+      
+    ],
+                 
   "widgets": [
-    { 
-        "id":"kount_logo",
-        "displayName":"Kount Fraud Detection",
-        "displayTemplate":"kount/kount-logo",
-        "editViewFields":[],
-        "icon":"/resources/admin/widgets/28_fraud_detection.png",
-        "validPageTypes":["order"]
-    }]
+   {
+      "id": "kount_logo",
+      "displayName": "Kount Fraud Detection",
+      "displayTemplate": "kount/kount-logo",
+      "editViewFields": [
+        {
+          "name": "merchantId",
+          "fieldLabel": "Merchant ID"
+        },
+        {
+          "name": "tenantUrl",
+          "fieldLabel": "Kount Tenant URL"
+        }
+      ],
+      "icon": "/resources/admin/widgets/28_fraud_detection.png",
+      "validPageTypes": [
+        "order",
+        "checkout"
+      ]
+    }
+  
+  ]
 }
