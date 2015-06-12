@@ -1,6 +1,6 @@
 {
   "about": {
-    "name": "Kount 2.0 Integrations Theme",
+    "name": "Kount 1.0 Integrations Theme",
     "extends": "core5",
     "isDesktop": true,
     "isMobile": false,
