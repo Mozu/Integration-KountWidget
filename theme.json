@@ -1,22 +1,18 @@
 {
-  /* About: Basic Information about the theme. */
   "about": {
     "name": "Kount 1.0 Integrations Theme",
     "extends": "core4",
     "isDesktop": true,
     "isMobile": true
   },
-  /* Settings: User-configurable options for your theme. */
-    "settings": {
+  "settings": {
 
       
     },
- /* Page Types: Users will be allowed to create documents of this type in the CMS */
-    "pageTypes": [
+  "pageTypes": [
 
       
     ],
-                 
   "widgets": [
    {
       "id": "kount_logo",
