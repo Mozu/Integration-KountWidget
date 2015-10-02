@@ -2,7 +2,7 @@ require(['modules/jquery-mozu', 'hyprlive',"modules/backbone-mozu",  "modules/ap
     function ($, Hypr, Backbone, Api) {
   
     $(document).ready(function () {
-       var res=Api.get('entity',{listName: 'mozu-kount-settings@a0842dd', id: 'KountId' });
+       var res=Api.get('entity',{listName: 'mozu-kount-settings@mzint', id: 'KountId' });
        res.then(function(r) { 
              var data = r.data;
              var merchantId=data.merchantId;
